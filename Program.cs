@@ -1,17 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace Arraywithsort
+namespace ArrayLista
 {
     class MainClass
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Con quienes vives en tu hogar?");
+            Console.WriteLine("Que productos se compraran en el supermercado?");
+            var groceries = new List<String>();
+            groceries.Add(Console.ReadLine());
+            groceries.Add(Console.ReadLine());
+            groceries.Add(Console.ReadLine());
+            groceries.Add(Console.ReadLine());
+            groceries.Add(Console.ReadLine());
 
-            var family = new string[] { "Jose. Papá", "Melissa. Mamá", "Johep", "Drake. Mascota", "Mai. Mascota", "Perla. Mascota" };
+            Console.WriteLine("La lista de compras es:");
 
-            foreach (var member in family)
-                Console.WriteLine(member);
+            foreach (var product in groceries)
+                Console.WriteLine(product);
 
             Console.ReadKey();
         }
